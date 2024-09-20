@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ClientsComponent } from './components/clients.component';
+import { CICDComponent } from './components/cicd.component';
 
 
 export const routes: Routes = [
     {
         path:'list',
-        component: ClientsComponent
+        component: CICDComponent
     },
     {
         path:'**',
@@ -20,4 +20,4 @@ export const routes: Routes = [
     declarations: [],
     providers: [],
 })
-export class ClientsRoutingModule { }
+export class CicdModule { }

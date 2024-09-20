@@ -5,3 +5,7 @@ export interface Client {
     creationDate: Date;
     status: boolean;
 }
+
+export interface SmallClient{
+    name: string
+}

@@ -1,0 +1,72 @@
+<div class="flex justify-content-center align-content-center">
+    <div class="flex flex-column">
+        <div class="flex-row">
+            <div class="flex justify-content-between">
+                <span class="text-3xl p-2">
+                    <strong>CI/CD</strong>
+                </span>
+                <div class="flex justify-content-end">
+                    <p-button class="p-2" icon="pi pi-plus" label="Nuevo cliente"/>
+                    <p-button icon="pi pi-file-export" class="p-2"
+                    label="Reporte" />
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <p-table #dt [value]="cicd" [tableStyle]="{ 'min-width': '75rem' }" styleClass="p-datatable-striped"
+            [paginator]="true" [rows]="10" [rowsPerPageOptions]="[5, 10, 20]"
+            [globalFilterFields]="['name', 'client.name', 'CIStart', 'CIEnd', 'hours', 'status']">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Nombre(s)</th>
+                    <th>Cliente</th>
+                    <th>Inicio CI</th>
+                    <th>Final CI</th>
+                    <th>Horas</th>
+                    <th>Estatus</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                    <th>
+                        <p-columnFilter type="text" field="name" placeholder="Search by name" ariaLabel="Filter Name" />
+                    </th>
+                    <th>
+                        <p-columnFilter type="text" field="client.name" placeholder="Search by client"
+                            ariaLabel="Filter Client" />
+                    </th>
+                    <th>
+                        <p-columnFilter type="date" field="CIStart" placeholder="Search by CI start"
+                            ariaLabel="Filter CI Start" />
+                    </th>
+                    <th>
+                        <p-columnFilter type="date" field="CIEnd" placeholder="Search by CI end"
+                            ariaLabel="Filter CI End" />
+                    </th>
+                    <th>
+                        <p-columnFilter type="numeric" field="hours" placeholder="Search by hours"
+                            ariaLabel="Filter Hours" />
+                    </th>
+                    <th>
+                        <p-columnFilter type="boolean" field="status">
+                        </p-columnFilter>
+                    </th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-cicd>
+                <tr>
+                    <td>{{ cicd.name}}</td>
+                    <td>{{ cicd.client.name }}</td>
+                    <td>{{ cicd.CIStart | date:'fullDate':'':'es-MX'}}</td>
+                    <td>{{ cicd.CIEnd | date:'fullDate':'':'es-MX'}}</td>
+                    <td>{{ cicd.hours}}</td>
+                    <td><p-tag [value]="setMessage(cicd.status)" [severity]="getSeverity(cicd.status)" /></td>
+                    <td><i class="pi pi-ellipsis-v p-2"></i></td>
+                </tr>
+            </ng-template>
+        </p-table>
+
+    </div>
+</div>

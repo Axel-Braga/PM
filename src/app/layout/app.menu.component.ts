@@ -35,6 +35,16 @@ export class AppMenuComponent implements OnInit {
                 ],
             },
             {
+                label: 'CI/CD',
+                items: [
+                    {
+                        label: 'CI/CD',
+                        icon: 'pi pi-fw pi-briefcase',
+                        routerLink: ['/CICD/list'],
+                    },
+                ],
+            },
+            {
                 label: 'Clientes',
                 items: [
                     {

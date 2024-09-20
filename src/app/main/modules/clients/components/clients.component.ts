@@ -6,7 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
 
-import { Client } from './interfaces/clients.interface';
+import { Client } from '../interfaces/clients.interface';
 
 @Component({
     standalone: true,
@@ -26,98 +26,98 @@ export class ClientsComponent {
     public clients: Client[] = [
         {
             name: 'prueba1',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: true,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: true,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,
         },
         {
             name: 'prueba',
-            email: 'jhondoe@gmail.com',
+            email: 'johndoe@gmail.com',
             phoneNumber: '9981352671',
             creationDate: new Date(),
             status: false,

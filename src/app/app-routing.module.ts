@@ -35,6 +35,19 @@ import { ClientsRoutingModule } from './main/modules/clients/clients-routing.mod
                     ],
                 },
                 {
+                    path: '',
+                    component: AppLayoutComponent,
+                    children: [
+                        {
+                            path: 'CICD',
+                            loadChildren: () =>
+                                import(
+                                    './main/modules/cicd/cicd-routing.module'
+                                ).then((m) => m.CicdModule),
+                        },
+                    ],
+                },
+                {
                     path: 'auth',
                     loadChildren: () =>
                         import(
