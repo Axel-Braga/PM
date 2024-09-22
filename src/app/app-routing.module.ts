@@ -35,6 +35,19 @@ import { ClientsRoutingModule } from './main/modules/clients/clients-routing.mod
                     ],
                 },
                 {
+                    path: '',
+                    component: AppLayoutComponent,
+                    children: [
+                        {
+                            path: 'projects',
+                            loadChildren: () =>
+                                import(
+                                    './main/modules/projects/projects-routing.module'
+                                ).then(m => m.ProjectsRoutingModule)
+                        }
+                    ]
+                },
+                {
                     path: 'auth',
                     loadChildren: () =>
                         import(

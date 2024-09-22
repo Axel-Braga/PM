@@ -44,6 +44,16 @@ export class AppMenuComponent implements OnInit {
                     },
                 ],
             },
+            {
+                label: 'Proyectos',
+                items: [
+                    {
+                        label: 'Lista',
+                        icon: 'pi pi-fw pi-briefcase',
+                        routerLink: ['/projects/list'],
+                    },
+                ],
+            }
         ];
     }
 }

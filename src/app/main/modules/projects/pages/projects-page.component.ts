@@ -5,7 +5,7 @@ import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { TagModule } from 'primeng/tag';
-import { Projects } from '../../interfaces/projects.interface';
+import { Projects } from '../interfaces/projects.interface';
 
 @Component({
   selector: 'app-projects-page',
