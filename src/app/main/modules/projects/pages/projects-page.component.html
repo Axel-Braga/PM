@@ -21,11 +21,13 @@
             <ng-template pTemplate="header">
                 <tr>
                     <th>Nombre(s)</th>
+                    <th>Descripción</th>
+                    <th>Área</th>
                     <th>Cliente</th>
                     <th>Fecha de Inicio</th>
                     <th>Fecha de Entrega</th>
                     <th>Fecha Próxima</th>
-                    <th>Horas Invertidas</th>
+                    <th>Fecha de Creación</th>
                     <th>Estatus de Trabajo</th>
                     <th>Estatus General</th>
                     <th>Acciones</th>
@@ -35,32 +37,40 @@
                         <p-columnFilter type="text" field="name" placeholder="Search by name" ariaLabel="Filter Name" />
                     </th>
                     <th>
+                        <p-columnFilter type="text" field="description" placeholder="Search by description"
+                            ariaLabel="Filter Description" />
+                    </th>
+                    <th>
+                        <p-columnFilter type="text" field="area" placeholder="Search by area"
+                            ariaLabel="Filter Area" />
+                    </th>
+                    <th>
                         <p-columnFilter type="text" field="client" placeholder="Search by client"
                             ariaLabel="Filter Client" />
                     </th>
                     <th>
-                        <p-columnFilter type="date" field="dateStart" placeholder="Search by start date"
+                        <p-columnFilter type="date" field="startDate" placeholder="Search by start date"
                             ariaLabel="Filter Start Date" />
                     </th>
                     <th>
-                        <p-columnFilter type="date" field="dateEnd" placeholder="Search by end date"
+                        <p-columnFilter type="date" field="endDate" placeholder="Search by end date"
                             ariaLabel="Filter End Date" />
                     </th>
                     <th>
-                        <p-columnFilter type="date" field="dateNext" placeholder="Search by nex date"
-                            ariaLabel="Filter Next Date" />
+                        <p-columnFilter type="date" field="proxDate" placeholder="Search by prox date"
+                            ariaLabel="Filter Prox Date" />
                     </th>
                     <th>
                         <p-columnFilter type="date" field="creationDate" placeholder="Search by date"
                             ariaLabel="Filter Creation Date" />
                     </th>
                     <th>
-                        <p-columnFilter type="boolean" field="statusWork">
+                        <p-columnFilter type="boolean" field="workStatus">
 
                         </p-columnFilter>
                     </th>
                     <th>
-                        <p-columnFilter type="boolean" field="statusGeneral">
+                        <p-columnFilter type="boolean" field="generalStatus">
 
                         </p-columnFilter>
                     </th>
@@ -70,14 +80,16 @@
             <ng-template pTemplate="body" let-projects>
                 <tr>
                     <td>{{ projects.name}}</td>
+                    <td>{{ projects.description}}</td>
+                    <td>{{ projects.area}}</td>
                     <td>{{ projects.client }}</td>
-                    <td>{{ projects.dateStart | date:'MMM dd, yyyy'}}</td>
-                    <td>{{ projects.dateEnd | date:'MMM dd, yyyy'}}</td>
-                    <td>{{ projects.dateNext | date:'MMM dd, yyyy'}}</td>
-                    <td>{{ projects.hours }}</td>
+                    <td>{{ projects.startDate | date:'MMM dd, yyyy'}}</td>
+                    <td>{{ projects.endDate | date:'MMM dd, yyyy'}}</td>
+                    <td>{{ projects.proxDate | date:'MMM dd, yyyy'}}</td>
+                    <td>{{ projects.creationDate | date:'MMM dd, yyyy'}}</td>
 
-                    <td><p-tag [value]="setMessage(projects.statusWork)" [severity]="getSeverity(projects.statusWork)" /></td>
-                    <td><p-tag [value]="setMessage(projects.statusGeneral)" [severity]="getSeverity(projects.statusGeneral)" /></td>
+                    <td><p-tag [value]="setMessage(projects.workStatus)" [severity]="getSeverity(projects.workStatus)" /></td>
+                    <td><p-tag [value]="setMessage(projects.generalStatus)" [severity]="getSeverity(projects.generalStatus)" /></td>
                     <td><i class="pi pi-ellipsis-v p-2"></i></td>
                 </tr>
             </ng-template>

@@ -1,10 +1,13 @@
 export interface Projects {
     name: string;
+    description: string;
+    area: string;
     client: string;
-    dateStart: Date;
-    dateEnd: Date;
-    dateNext: Date;
-    hours: number;
-    statusWork: boolean;
-    statusGeneral: boolean;
+    startDate: Date;
+    startDateTs?: Date;
+    endDate: Date;
+    proxDate: Date;
+    workStatus: boolean;
+    generalStatus: boolean;
+    creationDate: Date;
 }
